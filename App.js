@@ -1,21 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
+import Home from "./components/Home";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+const Separator = () => <View style={styles.separator} />;
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <View>
+        <Home/>
+        <Separator/>
+        <Button
+        title="Press me"
+        onPress={() => Alert.alert('Simple Button pressed')}
+      />
+      </View>
+      
+
+    );
+  } 
 }
-
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  separator: {
+    marginVertical: 8,
+    borderBottomColor: '#737373',
+    borderBottomWidth: StyleSheet.hairlineWidth,
   },
 });
