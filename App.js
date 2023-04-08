@@ -3,19 +3,15 @@ import React from 'react';
 import { StyleSheet, Text, View} from 'react-native';
 import Home from "./components/Home";
 
-const Separator = () => <View style={styles.separator} />;
+//const Separator = () => <View style={styles.separator} />;
 
 export default class App extends React.Component {
   render() {
     return (
-      <View>
-        <Home/>
-        <Separator/>
-        <Button
-        title="Press me"
-        onPress={() => Alert.alert('Simple Button pressed')}
-      />
-      </View>
+      
+    <Home/>
+
+    
       
 
     );
