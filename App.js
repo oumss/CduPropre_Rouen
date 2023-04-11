@@ -1,26 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View,TouchableOpacity} from 'react-native';
 import React from 'react';
-import { StyleSheet, Text, View} from 'react-native';
-import Home from "./components/Home";
+import { TailwindProvider } from 'tailwindcss-react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-//const Separator = () => <View style={styles.separator} />;
 
-export default class App extends React.Component {
-  render() {
+const Stack = createNativeStackNavigator();
+
+export default function App() {
     return (
-      
-    <Home/>
+      <NavigationContainer>
+        <TailwindProvider>
+          <Stack.Navigator>
+            <Stack.Screen name="Home" component={Home} />
+          </Stack.Navigator>
+        </TailwindProvider>
+      </NavigationContainer>
+  );
+} 
 
-    
-      
-
-    );
-  } 
-}
-const styles = StyleSheet.create({
-  separator: {
-    marginVertical: 8,
-    borderBottomColor: '#737373',
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  },
-});
