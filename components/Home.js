@@ -3,7 +3,6 @@ import React, { useLayoutEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { UserIcon, ChevronDownIcon, SearchIcon, CameraIcon, AdjustmentsVerticalIcon, HomeIcon, PlusCircleIcon, CurrencyDollarIcon, UserCircleIcon } from "react-native-heroicons/outline";
 import {GOOGLE_MAPS_APIKEY} from "@env";
-import {GooglePlacesAutocompete} from "react-native-google-places-autocomplete";
 import Map from './Map';
 
 const Home = () => {
@@ -69,21 +68,21 @@ const Home = () => {
 
       {/* Footer */}
       <View className="flex-row pt-4 px-6 items-center space-x-5">
-        <View className="flex-1 pt-1 items-center h-12 w-3 bg-[#B390EC] rounded-full ">
+        <View className="flex-1 pt-1 items-center h-12 w-1 bg-[#B390EC] rounded-full ">
             <HomeIcon size={40} color="#000" />
         </View>
 
-        <View className="flex-1 pt-1 items-center h-12 w-3 bg-[#ACC687] rounded-full ">
+        <View className="flex-1 pt-1 items-center h-12 w-1 bg-[#ACC687] rounded-full ">
             <PlusCircleIcon size={40} color="#000" />
         </View>
 
-        <View className="flex-1 pt-1 items-center h-12 w-3 bg-[#ACC687] rounded-full ">
+        <View className="flex-1 pt-1 items-center h-12 w-1 bg-[#ACC687] rounded-full ">
             <CurrencyDollarIcon size={40} color="#000" />
         </View>
 
-        <View className="flex-1 pt-1 items-center h-12 w-3 bg-[#ACC687] rounded-full ">
+        <View className="flex-1 pt-1 items-center h-12 w-1 bg-[#ACC687] rounded-full ">
             <UserCircleIcon size={40} color="#000" />
-        </View>   
+        </View>
 
       </View>
       
