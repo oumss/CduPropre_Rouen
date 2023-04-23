@@ -1,7 +1,7 @@
 import { View, Text, SafeAreaView, Image, TextInput } from 'react-native';
 import React, { useLayoutEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { UserIcon, ChevronDownIcon, SearchIcon, CameraIcon, AdjustmentsVerticalIcon, HomeIcon } from "react-native-heroicons/outline";
+import { UserIcon, ChevronDownIcon, SearchIcon, CameraIcon, AdjustmentsVerticalIcon, HomeIcon, PlusCircleIcon, CurrencyDollarIcon, UserCircleIcon } from "react-native-heroicons/outline";
 import {GOOGLE_MAPS_APIKEY} from "@env";
 import {GooglePlacesAutocompete} from "react-native-google-places-autocomplete";
 import Map from './Map';
@@ -68,22 +68,23 @@ const Home = () => {
 
 
       {/* Footer */}
-      <View className="flex-row  pt-4 px-5 items-center">
-        <View className="flex-1 items-center h-10 w-8 bg-[#ACC687] rounded-full">
-            <HomeIcon className="pt-4 h-9 w-9" color="#000"/>
+      <View className="flex-row pt-4 px-6 items-center space-x-5">
+        <View className="flex-1 pt-1 items-center h-12 w-3 bg-[#B390EC] rounded-full ">
+            <HomeIcon size={40} color="#000" />
         </View>
-        <View className="flex-1 items-center">
-            <Image className="h-8 w-8 bg-gray-300 p-4 mx-4 rounded-full" source={{url: 'https://links.papareact.com/wru' }} />
-            <Text className="font-bold text-gray-400 text-xs">Signaler </Text>
+
+        <View className="flex-1 pt-1 items-center h-12 w-3 bg-[#ACC687] rounded-full ">
+            <PlusCircleIcon size={40} color="#000" />
         </View>
-        <View className="flex-1 items-center">
-            <Image className="h-8 w-8 bg-gray-300 p-4 mx-4 rounded-full" source={{url: 'https://links.papareact.com/wru' }} />
-            <Text className="font-bold text-gray-400 text-xs">Cashback </Text>
+
+        <View className="flex-1 pt-1 items-center h-12 w-3 bg-[#ACC687] rounded-full ">
+            <CurrencyDollarIcon size={40} color="#000" />
         </View>
-        <View className="flex-1 items-center">
-            <Image className="h-8 w-8 bg-gray-300 p-4 mx-4 rounded-full" source={{url: 'https://links.papareact.com/wru' }} />
-            <Text className="font-bold text-gray-400 text-xs">Compte </Text>
-        </View>    
+
+        <View className="flex-1 pt-1 items-center h-12 w-3 bg-[#ACC687] rounded-full ">
+            <UserCircleIcon size={40} color="#000" />
+        </View>   
+
       </View>
       
     </SafeAreaView>
