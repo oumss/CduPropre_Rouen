@@ -1,24 +1,14 @@
 import { View, Text, SafeAreaView, Image, TextInput } from 'react-native';
 import React, { useLayoutEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { UserIcon, ChevronDownIcon, SearchIcon, CameraIcon, AdjustmentsVerticalIcon, HomeIcon } from "react-native-heroicons/outline";
+import { UserIcon, ChevronDownIcon, SearchIcon, CameraIcon, AdjustmentsVerticalIcon } from "react-native-heroicons/outline";
 import {GOOGLE_MAPS_APIKEY} from "@env";
 import {GooglePlacesAutocompete} from "react-native-google-places-autocomplete";
 import Map from './Map';
 
-const Home = () => {
-
-  const navigation = useNavigation();
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      headerTitle: "Accueil",
-      headerShown : false
-    })
-  }, []);
-
+const Header = () => {
   return (
-    
-    <SafeAreaView className="h-full bg-white pt-5">
+    <SafeAreaView className="bg-white pt-5">
       <Text>
 
         {/* Header */}
@@ -33,13 +23,14 @@ const Home = () => {
             <Text className="font-bold text-gray-400 text-xs">oumss78 </Text>
           </View>
         </View>
-        </Text>
-        
-        <View className="h-5/6 ">
+
+        <View>
 
             <Map/>
 
         </View>
+
+        
 
         {/* Search 
         <View className='flex-row items-center space-x-2 pb-2 mx-4'>
@@ -64,33 +55,14 @@ const Home = () => {
           <AdjustmentsVerticalIcon color="#00CCBB"/>
         </View>
           */}
-      
+      </Text>
 
-
-      {/* Footer */}
-      <View className="flex-row  pt-4 px-5 items-center">
-        <View className="flex-1 items-center h-10 w-8 bg-[#ACC687] rounded-full">
-            <HomeIcon className="pt-4 h-9 w-9" color="#000"/>
-        </View>
-        <View className="flex-1 items-center">
-            <Image className="h-8 w-8 bg-gray-300 p-4 mx-4 rounded-full" source={{url: 'https://links.papareact.com/wru' }} />
-            <Text className="font-bold text-gray-400 text-xs">Signaler </Text>
-        </View>
-        <View className="flex-1 items-center">
-            <Image className="h-8 w-8 bg-gray-300 p-4 mx-4 rounded-full" source={{url: 'https://links.papareact.com/wru' }} />
-            <Text className="font-bold text-gray-400 text-xs">Cashback </Text>
-        </View>
-        <View className="flex-1 items-center">
-            <Image className="h-8 w-8 bg-gray-300 p-4 mx-4 rounded-full" source={{url: 'https://links.papareact.com/wru' }} />
-            <Text className="font-bold text-gray-400 text-xs">Compte </Text>
-        </View>    
-      </View>
       
     </SafeAreaView>
-
-
-    
   )
 }
 
-export default Home;
+export default Header
+
+const styles = StyleSheet.create({})
+
