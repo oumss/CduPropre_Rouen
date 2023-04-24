@@ -88,7 +88,7 @@ const Map = () => {
               </View>
               <Text className="text-l font-medium ml-2">Papier</Text>
             </View>
-
+ 
             <View className='flex-row items-center pt-1 '>
               <View className="bg-gray-400 rounded-3xl ">
                   <Text className="text-l font-semibold ml-2 mr-2">Signalé depuis :</Text>
