@@ -1,6 +1,5 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image, SafeAreaView } from 'react-native'
 import React, { useLayoutEffect } from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
 import { useNavigation } from '@react-navigation/native';
 
 
@@ -18,7 +17,7 @@ const Report = () => {
     <SafeAreaView className="h-full bg-white pt-5">
       <Text>
         {/* Header */}
-        <View className="flex-row pb-2 items-center mx-4 space-x-2">
+        <View className="flex-row pb-2 items-center mx-4 space-x-2 pt-5 ">
           <Image className=" flex-1 h-11 w-11 p-4" source={require('./img/logo_cote.png')} />
 
           <View className="flex-row mx-4 ">
@@ -36,10 +35,9 @@ const Report = () => {
         {/* Camera */}
         <View className="h-full items-center">  
           <Text className=" font-semibold text-lg" >Signaler un déchet</Text>
-
+          <Text>Camera Zone</Text>
         </View>
 
-      
     </SafeAreaView>
   )
 }

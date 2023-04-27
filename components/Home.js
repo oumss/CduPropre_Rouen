@@ -20,7 +20,7 @@ const Home = () => {
       <Text>
 
         {/* Header */}
-        <View className="flex-row pb-2 items-center mx-4 space-x-2">
+        <View className="flex-row pb-2 items-center mx-4 space-x-2 pt-5">
           <Image className=" flex-1 h-11 w-11 p-4" source={require('./img/logo_cote.png')} />
 
           <View className="flex-row mx-4 ">
