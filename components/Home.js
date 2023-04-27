@@ -2,9 +2,7 @@ import { View, Text, SafeAreaView, Image, TextInput, TouchableOpacity } from 're
 import React, { useLayoutEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { UserIcon, ChevronDownIcon, SearchIcon, CameraIcon, AdjustmentsVerticalIcon, HomeIcon, PlusCircleIcon, CurrencyDollarIcon, UserCircleIcon } from "react-native-heroicons/outline";
-import { GOOGLE_MAPS_APIKEY } from "@env";
 import Map from './Map';
-import Report from './Report';
 
 const Home = () => {
 
@@ -38,7 +36,7 @@ const Home = () => {
       </Text>
 
       {/* MapView */}
-      <View className="h-5/6 ">
+      <View className="h-full ">
         <Map />
       </View>
 
@@ -68,8 +66,8 @@ const Home = () => {
 
 
 
-      {/* Footer */}
-      <View className="flex-row pt-4 px-6 items-center space-x-5">
+      {/* Navbar Footer */}
+      {/* <View className="flex-row pt-4 px-6 items-center space-x-5">
 
         <TouchableOpacity className="flex-1 pt-1 items-center h-12 w-1 bg-[#B390EC] rounded-full ">
           <HomeIcon size={40} color="#000" />
@@ -91,7 +89,7 @@ const Home = () => {
           <UserCircleIcon size={40} color="#000" />
         </TouchableOpacity>
 
-      </View>
+      </View> */}
 
     </SafeAreaView>
 
