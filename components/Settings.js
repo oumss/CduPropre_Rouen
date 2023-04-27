@@ -1,6 +1,7 @@
-import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Image, FlatList } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native';
+import { TouchableOpacity } from 'react-native';
 
 const Settings = () => {
   
@@ -35,6 +36,12 @@ const Settings = () => {
         <View className="h-full items-center">  
           <Text className=" font-semibold text-lg" >Paramètres du compte</Text>
           <Text>Zone</Text>
+  
+          <TouchableOpacity><Text>Zone</Text></TouchableOpacity>
+          <TouchableOpacity><Text>Zone</Text></TouchableOpacity>
+          <TouchableOpacity><Text>Zone</Text></TouchableOpacity>
+          <TouchableOpacity><Text>Zone</Text></TouchableOpacity>
+
         </View>
 
       

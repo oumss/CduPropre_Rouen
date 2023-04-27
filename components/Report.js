@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Image, SafeAreaView } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native';
+//import ImagePicker from 'react-native-image-crop-picker';
 
 
 const Report = () => {
@@ -12,6 +13,14 @@ const Report = () => {
       headerShown: false
     })
   }, []);
+
+  // ImagePicker.openPicker({
+  //   width: 300,
+  //   height: 400,
+  //   cropping: true
+  // }).then(image => {
+  //   console.log(image);
+  // });
 
   return (
     <SafeAreaView className="h-full bg-white pt-5">
